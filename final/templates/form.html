@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<title>Liver Disease Prediction Form</title>
+</head>
+<body>
+	
+	<header>
+		<h1>Pridiction Form</h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="/home">Home</a></li>
+			
+		</ul>
+	</nav>
+	
+	<form method="post" id="myForm" action="/form">
+		<label for="name">Name of the patient:</label>
+		<input type="text" id="name" name="name" placeholder="Enter name" required>
+
+		<label for="age">Age of the patient:</label>
+		<input type="text" id="age" name="age" placeholder="Enter age" required>
+
+		<label for="gender" required>Gender of the patient:</label>
+		<select id="gender" name="gender">
+			<option disabled selected value="" required>Select Gender </option>
+			<option value="0.5">Male</option>
+			<option value="0.0">Female</option>
+			<option value="1.0">Other</option>
+		</select>
+
+		<label for="tbil">Total Bilirubin:</label>
+		<input type="text" id="tbil" name="tbil" placeholder="Enter total bilirubin" required>
+
+		<label for="dbil">Direct Bilirubin:</label>
+		<input type="text" id="dbil" name="dbil" placeholder="Enter direct bilirubin"required>
+
+		<label for="alkphos">Alkphos Alkaline Phosphotase:</label>
+		<input type="text" id="alkphos" name="alkphos" placeholder="Enter Alkphos Alkaline Phosphotase"required>
+
+		<label for="sgpt">Sgpt Alamine Aminotransferase:</label>
+		<input type="text" id="sgpt" name="sgpt" placeholder="Enter Sgpt Alamine Aminotransferase"required>
+
+		<label for="sgot">Sgot Aspartate Aminotransferase:</label>
+		<input type="text" id="sgot" name="sgot" placeholder="Enter Sgot Aspartate Aminotransferase"required>
+
+		<label for="tp">Total Protiens:</label>
+		<input type="text" id="tp" name="tp" placeholder="Enter total protiens"required>
+
+		<label for="alb">ALB Albumin:</label>
+		<input type="text" id="alb" name="alb" placeholder="Enter ALB Albumin"required>
+
+		<label for="agr">A/G Ratio Albumin and Globulin Ratio:</label>
+		<input type="text" id="agr" name="agr" placeholder="Enter A/G Ratio Albumin and Globulin Ratio"required>
+
+		<input type="submit" value="Predict">
+	</form>
+<footer>
+		<p>&copy; 2023 Liver Disease Prediction</p>
+	</footer>
+
+</body>
+    
+</html>
+

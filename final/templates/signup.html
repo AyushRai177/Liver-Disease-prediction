@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign In/Sign Up Form</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signup.css') }}">
+</head>
+<body>
+
+	<header style="text-align: center !important;">
+		<h1>Liver Disease Prediction</h1>
+		
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="/home">Home</a></li>
+		</ul>
+	</nav>
+
+	
+	<h1>Sign In/Sign Up</h1>
+	<form action="#" method="post">
+		<h2>Sign In</h2>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required>
+		<input type="submit" value="Sign In">
+		<div id="signup-link">Don't have an account? <a href="#">Sign Up</a></div>
+	</form>
+	<form action="#" method="post" style="display: none;">
+		<h2>Sign Up</h2>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		<label for="email2">Email:</label>
+		<input type="email" id="email2" name="email2" required>
+		<label for="password2">Password:</label>
+		<input type="password" id="password2" name="password2" required>
+		<input type="submit" value="Sign Up">
+		<div id="signin-link">Already have an account? <a href="#">Sign In</a></div>
+	</form>
+	<script>
+	// Get references to the sign-in and sign-up forms and links
+	const signinForm = document.getElementsByTagName("form")[0];
+	const signupForm = document.getElementsByTagName("form")[1];
+	const signupLink = document.getElementById("signup-link");
+	const signinLink = document.getElementById("signin-link");
+
+	// Show the sign-up form and hide the sign-in form when the "Sign Up" link is clicked
+	signupLink.addEventListener("click", () => {
+		signinForm.style.display = "none";
+		signupForm.style.display = "block";
+	});
+
+	// Show the sign-in form and hide the sign-up form when the "Sign In" link is clicked
+	signinLink.addEventListener("click", () => {
+		signupForm.style.display = "none";
+		signinForm.style.display = "block";
+	});
+
+	// Handle form submission for sign-in and sign-up forms
+	signinForm.addEventListener("submit", (event) => {
+		event.preventDefault();
+		// Handle sign-in form submission here
+	});
+
+	signupForm.addEventListener("submit", (event) => {
+		event.preventDefault();
+		// Handle sign-up form submission here
+	});
+</script>
+<footer>
+		<p>&copy; 2023 Liver Disease Prediction</p>
+	</footer>

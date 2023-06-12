@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Liver Disease Prediction</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/table.css') }}">
+     
+</head>
+<body>
+  <header>
+    <h1>Liver Disease Prediction</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/dataset">Dataset Info</a></li>
+      <li><a href="/about_attributes">About Attributes</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="get-started">
+      <h2>About the Project</h2>
+      <p>
+        The project utilizes a dataset containing information such as age, gender, various blood tests, and other clinical parameters. These features are used to train the machine learning models and make predictions regarding liver disease.
+      </p>
+    </section>
+
+    <section class="get-started">
+      <h2>Random Forest Model</h2>
+      <p>
+        Random Forest is a machine learning algorithm used for classification tasks. It is an ensemble learning method that combines multiple decision trees to make predictions. In our liver disease prediction project, we chose the Random Forest model due to its ability to handle high-dimensional datasets and handle non-linear relationships between features and the target variable.
+      </p>
+      <p>
+        The initial accuracy of our Random Forest model was [0.9990922294843864]. However, we performed hyperparameter tuning to optimize the model's performance. After hyperparameter tuning, the accuracy of the Random Forest model improved to [0.9979575369148719].
+      </p>
+    </section>
+
+    
+    <section class="get-started">
+        <h2>Model Comparison</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Accuracy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RandomForestClassifier</td>
+              <td>0.999274</td>
+            </tr>
+            <tr>
+              <td>DecisionTreeClassifier</td>
+              <td>0.995461</td>
+            </tr>
+            <tr>
+              <td>KNeighborsClassifier</td>
+              <td>0.957335</td>
+            </tr>
+            <tr>
+                <td>GradientBoostingClassifier</td>
+                <td>0.881627</td>
+              </tr>
+              <tr>
+                <td>classLogisticRegressionifier</td>
+                <td>0.689179</td>
+              </tr>
+              <tr>
+                <td>SVC classifier</td>
+                <td>0.673384</td>
+              </tr>
+              <tr>
+                <td>GaussianNB classifier</td>
+                <td>0.654503</td>
+              </tr>
+              
+          </tbody>
+        </table>
+      </section>
+  
+
+    <section class="get-started">
+      <h2>Testing and Results</h2>
+      <p>
+        We tested our trained Random Forest model on a separate dataset to evaluate its performance. The dataset consisted of [insert number of instances] instances with various features related to liver health.
+      </p>
+      <p>
+        After applying the trained model to the test dataset, we achieved [insert accuracy percentage on the test dataset] accuracy. This indicates that our Random Forest model is effective in predicting liver disease based on the provided features.
+      </p>
+      <p>
+        [Insert additional details about the results, such as precision, recall, or any specific metrics used for evaluation, if applicable.]
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Liver Disease Prediction. All rights reserved.</p>
+  </footer>
+</body>
+</html>

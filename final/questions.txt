@@ -1,0 +1,35 @@
+flash notification for null value in form
+to pdf page
+profile page
+history page
+
+working of project page
+    why we used random madol?
+    acuracy?
+    test data results?
+
+dataset
+html https://www.kaggle.com/datasets/abhi8923shriv/liver-disease-patient-dataset
+data process link 
+https://www.kaggle.com/code/vuppalaadithyasairam/99-6-test-acc-xgboost-with-resampling
+
+
+make our project description based on raw lpd data or processed lpd data
+
+why age,result,gender(other is not showing in raw dataset but showing in processed dataset) 
+value is different in processed data set
+
+
+in raw data 1==liver patient (positive)
+            2==non liver patient (negative)
+in processed data 0== positive
+                  1== negative
+
+questions
+1-what screen short we have to take?
+2-prediction model not returning any value other than 1, what to do?
+3-do we have to make ppt too for presentation?
+4-wher to get certificate mentions in instruction?
+	Certificates:
+    School of Computer Applications
+    Company

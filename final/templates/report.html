@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/table.css') }}">
+    <title>Medical Report</title>
+</head>
+<body>
+    <header>
+        <h1>Medical Report</h1>
+    </header>
+    <nav>
+		<ul>
+			<li><a href="/home">Home</a></li>
+			<li><a href="/form">Check more</a></li>
+		</ul>
+	</nav>
+    
+    <main>
+        <div class="container">
+            {{input_df|safe}}
+        </div>
+        <section>
+            <h2>Patient Information</h2>
+            <div class="patient-details">
+                <p><strong>Name:</strong> {{ name }}</p>
+                <p><strong>Age:</strong> {{ age }}</p>
+                <p><strong>Gender:</strong>{{ gender|replace('0.0', 'Female')|replace('0.5', 'Male')|replace('1.0', 'Other') }}</p>
+            </div>
+            <table>
+                <tr>
+                    <th style="width: 33.33%;">Attribute</th>
+                    <th style="width: 33.33%;">Value</th>
+                    <th style="width: 33.33%;">Reference</th>
+                </tr>
+                <tr>
+                    <td>Total Bilirubin</td>
+                    <td>{{ tbil }}</td>
+                    <td>0.1-1.2 mg/dL</td>
+                </tr>
+                <tr>
+                    <td>Direct Bilirubin</td>
+                    <td>{{ dbil }}</td>
+                    <td>0.0-0.3 mg/dL</td>
+                </tr>
+                <tr>
+                    <td>Alkphos Alkaline Phosphotase</td>
+                    <td>{{ alkphos }}</td>
+                    <td>30-120 U/L</td>
+                </tr>
+                <tr>
+                    <td>Sgpt Alamine Aminotransferase</td>
+                    <td>{{ sgpt }}</td>
+                    <td>5-40 U/L</td>
+                </tr>
+                <tr>
+                    <td>Sgot Aspartate Aminotransferase</td>
+                    <td>{{ sgot }}</td>
+                    <td>5-40 U/L</td>
+                </tr>
+                <tr>
+                    <td>Total Protiens</td>
+                    <td>{{ tp }}</td>
+                    <td>6.0-8.3 g/dL</td>
+                </tr>
+                <tr>
+                    <td>ALB Albumin</td>
+                    <td>{{ alb }}</td>
+                    <td>3.4-5.4 g/dL</td>
+                </tr>
+                <tr>
+                    <td>A/G Ratio Albumin and Globulin Ratio</td>
+                    <td>{{ agr }}</td>
+                    <td>1.0-2.5</td>
+                </tr>
+                <tr>
+                    <td>Result</td>
+                    <td id="prediction-text">{{ prediction|replace('1', 'Positive')|replace('2', 'Negative') }}</td>
+                    <script>
+                        var prediction = "{{ prediction }}";
+                        var predictionText = document.getElementById("prediction-text");
+                    
+                        if (prediction === "1") {
+                            predictionText.textContent = "Positive";
+                            predictionText.style.color = "red";
+                        } else if (prediction === "0") {
+                            predictionText.textContent = "Negative";
+                            predictionText.style.color = "green";
+                        } else {
+                            predictionText.textContent = "Unknown";
+                            predictionText.style.color = "black";
+                        }
+                    </script>
+                    <td>-</td>
+                </tr>
+            </table>
+        </section>
+        <section><button onclick="downloadPDF()"></button></section>
+    </main>
+    
+    <footer>
+        <p>Medical Report - Generated on {{ report_date }}</p>
+    </footer>
+</body>
+</html>

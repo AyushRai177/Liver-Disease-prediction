@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<title>Liver Disease Prediction</title>
+
+</head>
+<body>
+	<header style="text-align: center !important;">
+		<h1>Liver Disease Prediction</h1>
+		
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="#about">About</a></li>
+			<li><a href="#info">Information</a></li>
+			<li><a href="#blog">Blog</a></li>
+			<li><a href="/signup">Sign up</a></li>
+			
+		</ul>
+	</nav>
+
+	<main>
+		<section id="about" class="get-started">
+			<h2>About</h2>
+			<p>Welcome to Liver Disease Prediction, a website dedicated to helping you assess your risk of developing live disease. Our prediction tool uses data on your health, lifestyle, and medical history to provide an accurate assessment of your risk of developing liver disease.</p>
+		</section>
+
+		<section id="tool" class="get-started">
+			<h2>Prediction Tool</h2>
+			<p>Assess your risk of developing liver disease by clicking the button below.</p>
+    		<a id="predict-button" class="prediction-button" href="/form">Predict</a>
+			
+		</section>
+
+		<section id="info" class="get-started">
+			<h2><a href="/what_is_liver_disease"></a>Information</h2>
+			<p>Learn more about liver disease and how to prevent it.</p>
+			<ul>
+				<li><a href="/what_is_liver_disease">What is liver disease?</a></li>
+				<li><a href="/what_is_liver_disease">Symptoms of liver disease</a></li>
+				<li><a href="/what_is_liver_disease">Causes of liver disease</a></li>
+				<li><a href="/what_is_liver_disease">Diagnosis of liver disease</a></li>
+				<li><a href="/what_is_liver_disease">Treatment of liver disease</a></li>
+				<li><a href="/what_is_liver_disease">Prevention of liver disease</a></li>
+			</ul>
+		</section>
+
+		<section id="blog" class="get-started">
+			<h2>Blog</h2>
+			<p>Stay up-to-date on the latest news and research related to liver disease.</p>
+			<ul>
+				<li><a href="/New_study_finds_link_between_alcohol_consumption_and_liver_disease">New study finds link between alcohol consumption and liver disease</a></li>
+				<li><a href="/How_diet_can_affect_liver_health">How diet can affect liver health</a></li>
+				<li><a href="/Liver_disease_in_children_what_parents_should_know">Liver disease in children: what parents should know</a></li>
+			</ul>
+		</section>
+
+		<section id="how" class="get-started">
+			<h2>Prediction Model Detailes</h2>
+			<p>Know which machine learning algorithm we used to create liver disease prediction</p>
+			<ul>
+				<li><a href="/why_random_forest">Details</a></li>
+			</ul>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Liver Disease Prediction</p>
+	</footer>
+	
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Liver Disease Prediction - Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	
+</head>
+<body>
+    <header>
+        <h1>Liver Disease Prediction</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="get-started">
+            <h2>Prediction Result</h2>
+            <p>The result of your liver disease prediction is:</p>
+            <div class="prediction-result">
+                <p id="prediction-text" style="font-size: 35px;">{{ 'Positive' if prediction == 1 else 'Negative' }}</p>
+                <script>
+                    var prediction = "{{ prediction }}";
+                    var predictionText = document.getElementById("prediction-text");
+                
+                    if (prediction === "1.0") {
+                        predictionText.textContent = "Positive";
+                        predictionText.style.color = "red";
+                    } else {
+                        predictionText.textContent = "Negative";
+                        predictionText.style.color = "green";
+                    }
+                </script>
+            </div>
+            
+                
+        </section>
+        <section class="get-started">
+            <h2>Print Result</h2>
+            <div class="print-report">
+                <a id="print-button" href="/report">Print Report</a>
+            </div>
+        </section>
+        <section class="get-started">
+            <h2>More</h2>
+            <div class="check-more">
+                <a id="check-more" href="/form">Check Another Prediction</a>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        &copy; 2023 Liver Disease Prediction
+    </footer>
+</body>
+</html>

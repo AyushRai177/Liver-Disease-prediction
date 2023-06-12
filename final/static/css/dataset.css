@@ -1,0 +1,33 @@
+.plotly-graph {
+    width: 600px;
+    height: 400px;
+}
+.container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .graph {
+        width: 600px; /* Adjust the width as needed */
+        padding: 20px;
+    }
+    .table {
+        width: 600px; /* Adjust the width as needed */
+        padding: 20px;
+    }
+    .table {
+        flex: 1;
+        padding: 40px;
+    }
+    .table td, .table th {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #0a0909;
+        font-size: 14px; /* Adjust the font size as needed */
+    }
+    @media screen and (max-width: 600px) {
+        .graph, .table {
+            width: 100%;
+        }
+    }
